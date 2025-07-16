@@ -5,7 +5,8 @@ function AddMovieForm({ onAddMovie }) {
     title: '',
     description: '',
     posterURL: '',
-    rating: ''
+    rating: '',
+    trailerURL: ''
   });
 
   const handleChange = (e) => {
@@ -63,6 +64,13 @@ function AddMovieForm({ onAddMovie }) {
         value={formData.rating}
         onChange={handleChange}
         required
+      />
+      <input
+        type="url"
+        name="trailerURL"
+        placeholder="Trailer URL (YouTube embed link)"
+        value={formData.trailerURL}
+        onChange={handleChange}
       />
       <button type="submit">Add Movie</button>
     </form>
